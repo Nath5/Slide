@@ -82,7 +82,7 @@
 
 
     <LinearLayout
-        android:id="@+id/prof"
+        android:id="@+id/go_to_profile_layout"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="?android:selectableItemBackground"

@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/settings_defaultcolor"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="?android:selectableItemBackground"
+            android:id="@+id/settings_defaultcolor"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="?android:selectableItemBackground"
 
-        android:orientation="horizontal"
-        android:paddingLeft="16dp">
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
 
-        <View
-            android:id="@+id/color"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginBottom="8dp"
-            android:layout_marginRight="16dp"
+        <RelativeLayout
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="16dp"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="8dp"
+                android:layout_width="17dp"
+                android:layout_height="17dp">
 
-            android:layout_marginTop="8dp"
-            android:adjustViewBounds="true"
+            <View
+                    android:id="@+id/color_active"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle"/>
+            <View
+                    android:id="@+id/color"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle"/>
+        </RelativeLayout>
 
-            android:background="@drawable/circle" />
 
-            <TextView
+        <TextView
                 android:id="@+id/name"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="48dp"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:text="Android"
                 android:textColor="?attr/font"
-                android:textSize="16sp" />
+                android:textSize="16sp"/>
 
     </LinearLayout>
 </LinearLayout>
